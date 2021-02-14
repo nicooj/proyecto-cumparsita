@@ -1,0 +1,848 @@
+
+body{
+  background-size: 100%;
+  font-family: "montserrat";
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+}
+header{
+  width: 100%;
+  background: black;
+ 
+}
+main{
+  background-color: #000000;
+  width: 100%;
+}
+
+/*Principio de secccion fotos del home*/
+/*El que contiene todo los elementos*/
+.contenedorf{
+  margin: auto;
+}
+/*El h1 de la seccion*/
+.text1{
+  text-align: center;
+  font-family: 'Bevan', cursive;
+  font-size: 5rem;
+  transition: all 0.8s;
+  color: yellow;
+ 
+}
+
+.text1:hover{
+ color: yellow;
+ text-shadow: 0px 0px 50px,0px 0px 100px, 0px 0px 150px;
+
+}
+/*Aca es donde empiezo aplicar grid*/
+.fotos{
+ width: 100%;
+ margin:auto;
+ display: grid;
+  
+
+}
+.foto1{
+  width: 100%;
+  
+}
+.articulof{
+  margin: 5px;
+}
+/*Aca aplico el responsive, esta vez me salio bien*/
+@media (min-width:520px){
+  .fotos{
+    grid-template-columns: repeat(2,50%);
+  }
+}
+
+@media (min-width:728px){
+  .fotos{
+    grid-template-columns: repeat(3,33.3%);
+  }
+}
+
+@media (min-width:1024px){
+  .fotos{
+    grid-template-columns: repeat(4,25%);
+  }
+}
+/*Fin de seccion fotos*/
+
+
+
+/*Home mas lindo */
+.main-home{
+  overflow: hidden;
+}
+.contenedor-texto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.efecto-texto{
+  filter: contrast(150%) brightness(1000%);
+  position: relative;
+}
+
+.index-texto{
+  
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Bevan', cursive;
+  letter-spacing: 5px;
+  position: relative;
+  margin-top: 35px;
+}
+
+.index-texto::before,
+.index-texto::after{
+  content: attr(data-text);
+  color: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  filter: blur(0.02em);
+  background: radial-gradient(white, transparent 100%);
+}
+
+.index-texto::after{
+  mix-blend-mode: difference;
+}
+
+.index-novedades{
+  text-align: center;
+  font-family: 'Bevan', cursive;
+  transition: all 0.8s;
+  color: yellow;
+
+}
+.index-novedades h1{
+  font-size: 6rem;
+  transition: all 0.8s;
+  color: yellow;
+}
+
+.index-novedades:hover{
+  color: yellow;
+ text-shadow: 0px 0px 50px,0px 0px 100px, 0px 0px 150px;
+}
+
+/*Reproductor de musica*/
+.contenedor-musica{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction:column;
+  position: relative;
+  
+  
+}
+
+
+.contenedor-play{
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: black;
+  border-left: 3px solid yellow;
+  border-right: 3px solid yellow;
+
+}
+
+.contenedor-post{
+  width: 100%;
+  height: 400px;
+}
+.contenedor-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.contenedor-title{
+  padding: 15px 25px;
+  width: 100%;
+}
+.contenedor-title .contenedor-nombre{
+  padding: 5px 0px;
+  color: yellow;
+  font-size: 25px;
+  font-family: 'Bevan', cursive;
+}
+.contenedor-title h2{
+  color: yellow;
+  padding: 5px 0px;
+  font-size: 25px;
+  font-family: 'Bevan', cursive;
+}
+.contenedor-canciones{
+  width: 100%;
+  padding: 10px 25px;
+  min-height: calc(100% - 400px);
+}
+.contenedor-listacanciones{
+  width: 100%;
+}
+.canciones{
+  list-style: none;
+  color: yellow;
+  font-size: 19px;
+  padding: 15px 0px;
+  font-family: 'Libre Baskerville', serif;
+  border-bottom: 1px solid yellow;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.canciones a{
+  color: yellow;
+  text-decoration: none;
+}
+.canciones a:hover{
+  color: white;
+  text-decoration: none;
+}
+.canciones:hover{
+  color: white;
+  border-bottom: 1px solid yellow;
+}
+
+
+.contenedor-videos{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  margin: 25px;
+  
+}
+.contenedor-videos2 iframe{
+  border-right: 2px solid yellow;
+  border-left: 2px solid yellow;
+  
+}
+.contenedor-videos2 h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: yellow;
+  font-family: 'Bevan', cursive;
+  
+}
+@media screen and(min-width: 500px){
+  .contenedor-videos{
+   flex-direction: column;
+  }
+
+}
+.video-oficial{
+  font-size: 5rem;
+  transition: all 0.8s;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bevan', cursive;
+}
+
+.video-oficial:hover{
+  color: yellow;
+ text-shadow: 0px 0px 50px,0px 0px 100px, 0px 0px 150px;
+}
+/*Fin del nuevo home*/
+
+
+
+/*Estilos para la cumparsita rock*/
+.lcr72{
+  color: yellow;
+}
+
+/*Nuevo menu */
+
+.container-menu{
+  position: fixed;
+  z-index: 1;
+  height: 8vh;
+  width: 75px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 50% ;
+  transition: .3s cubic-bezier(.63,-0,13,.32,1,24);
+
+}
+.lista li {
+  list-style: none;
+  color: yellow;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  transform: translateY(-500px);
+  opacity: 0;
+  transition:transform .6s cubic-bezier(1,-0,69,.55,1.56);
+}
+.lista li a{
+  color: yellow;
+}
+.lista li a:hover{
+  color: rgba(0,0,0,.8);
+  transform: scale(1.3,1.3);
+  background: yellow;
+  text-decoration: none;
+  
+  
+}
+.input_{
+  display: none;
+}
+
+
+
+label{
+  z-index: 99;
+  position: fixed;
+  top: 5px; left: 20px;
+  cursor: pointer;
+}
+label > div{
+  height: 5px;
+  width: 35px;
+  background: yellow;
+  transition: transform .3s;
+  margin: 5px;
+}label:hover > div{
+background:white;
+}
+
+#menu-button:checked ~ .container-menu{
+  height: 100vh;
+  width: 275px;
+}
+/*efecto al label*/
+#menu-button:checked ~ label {
+  left:calc(250px - 40px);
+}
+/*Efecto a los palitos del label*/
+#menu-button:checked ~ label > div:nth-child(1){
+  transform: rotate(45deg);
+  margin-top: 18px;
+}
+#menu-button:checked ~ label > div:nth-child(3){
+  transform: rotate(-45deg);
+  margin-top: -20px;
+}
+#menu-button:checked ~ label > div:nth-child(2){
+ opacity: 0;
+}
+
+/*efecto a la lista*/
+#menu-button:checked ~ .container-menu .lista li {
+  transform: translate(-0px);
+  opacity: 1;
+}
+
+
+/* estilos a recitales*/
+ #tour{
+   background: black;
+   padding: 60px 0;
+   font-family: "monserrat";
+   width: 100%;
+   
+  
+   
+   
+  
+  
+   
+ }
+ 
+  
+  
+
+ 
+ #tour .contenedor-tour{
+   display: flex;
+   justify-content: space-around;
+   
+   
+ }
+ #tour img {
+   width: 80%;
+   border-radius: 15px;
+   height: 80%;
+   background-color: red;
+   min-width: 150px;
+   
+  
+   
+  
+ }
+ #tour .imagen-tour {
+   width: 40%;
+   position: relative;
+  top: 1px;
+  
+ }
+ #tour .texto-tour{
+   width: 50%;
+   font-family: 'Bevan', cursive;
+   
+ }
+
+ #tour h4{
+   color: yellow;
+   text-align: center;
+   font-size: 25px;
+   
+ }
+ #tour h2{
+   font-size: 20px;
+ }
+ #tour p{
+   font-size: 15px;
+ }
+
+ .fechas-tour{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   margin-bottom: 60px;
+   margin: auto;
+   padding-bottom: 30px ;
+   min-width: 350px;
+   font-family: 'Libre Baskerville', serif;
+
+ }
+ .fechas-tour .numero-tour{
+   font-size: 34px;
+ }
+ .fechas-tour h5 .fechas-tour p {
+   margin: 0;
+  
+ }
+ .fechas-tour h5{
+   font-size: 25px;
+ }
+
+ .fechas-tour a{
+   background: white;
+   color: black;
+   padding: 15px 30px;
+ }
+ /* lugar de las fechas */
+ .lugar-tour{
+   font-size: 15px;
+   border-radius: 15px; 
+   color: yellow;
+   margin-left: 2px;
+   font-family: 'Libre Baskerville', serif;
+ }
+ /* fecha- tour */
+ .fecha-tour{
+  font-size: 15px;
+  border-radius: 15px; 
+  color: yellow;
+  margin-right: 2px;
+  font-family: 'Libre Baskerville', serif;
+ }
+ /*Numero- tour*/
+ .numero-tour{
+  font-size: 15px;
+  border-radius: 15px; 
+  color: yellow;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: 'Libre Baskerville', serif;
+ }
+ /*arreglos al boton*/
+ .boton-tour{
+   margin-top: 14px;
+   font-size: 25px;
+   font-family: 'Libre Baskerville', serif;
+   
+ }
+ .boton-tour a{
+   border-radius: 25px;
+   text-decoration: none;
+   background: red;
+   color: yellow;
+   
+ }
+ .boton-tour a:hover{
+   text-decoration: none;
+   color: white;
+ }
+
+
+.contenedor1-tour{
+  width: 100%;
+  background: rgba(34,34,34,0.75);
+  border: solid 3px rgba(34,34,34,0.75);
+  border-radius: 15px;
+  font-family:"monserrrat";
+  color: yellow;
+  min-width: 320px;
+  min-height: 640px;
+}
+.contenedor1-tour:hover{
+  background-color: rgba(0,0,0,0.1);
+  
+}
+
+    
+
+  /* seccion contacto */
+
+  .container-main{
+    width: 100%;
+    height: 400px;
+    padding-top: 30px;
+    pad
+  }
+
+.container-contacto{
+  background: black;
+  color: yellow;
+  font-family: 'Bevan', cursive;
+  padding: 0 5em;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  
+}
+.container-contacto2{
+  text-align: center;
+  font-size: 3em;
+ 
+}
+.container-contacto2 span{
+  color: red;
+}
+
+.container-grupo{
+  box-shadow: 0 0 20px rgba(255,255,255, .3);
+  
+}
+
+.container-grupo > *{
+  padding: 1em;
+}
+ /*Estilos para todo el formulario */
+.container-formulario{
+  background: #222222;
+}
+.container-formulario form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container-formulario form .container-bloque{
+  grid-column: 1/3;
+}
+.container-formulario form p{
+  margin: 0;
+  padding: 1em;
+}
+
+
+.container-formulario form button,
+.container-formulario form input,
+.container-formulario form textarea{
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #d63031;
+  outline: 0;
+  color: white;
+}
+
+.container-formulario form button{
+  background: red;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  color: #000000;
+}
+.container-formulario form button:hover{
+  background: #d63031;
+  color:white;
+}
+
+/*Seccion informacion*/
+.container-informacion{
+  background: #000000;
+  text-align: center;
+ 
+}
+.container-informacion h4,
+.container-informacion ul,
+.container-informacion li{
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+  
+.container-informacion li{
+  list-style: none;
+  padding: 0;
+  margin-right: 4em;
+}
+
+.container-informacion li ul {
+  padding: .3em;
+}
+
+/*adaptando a distintas pantallas */
+@media (min-width: 700px){
+ .container-contacto{
+   padding: 0 4rem;
+   height: 100%;
+ }
+ .container-grupo{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   
+ }
+}
+
+/*Seccion discos*/
+.main-discos{
+  overflow: hidden;
+  background:black;
+}
+/*titulo de discos*/
+.discos-titulo{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  background: rgba(0,0,0,.5);
+  font-family: 'Bevan', cursive;
+  margin-top: 20px;
+  
+  
+  
+}
+.discos-titulo h1{
+  background-image: linear-gradient(to right, yellow, yellow, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+
+}
+
+/*imagenes de los cd*/
+.contenedor-imagenes{
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+
+}
+.contenedor-imagen{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+.contenedor-imagen img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 20px;
+  
+}
+.contenedor-imagen:hover{
+  transform: scale(1.3);
+}
+.contenedor-imagen h2{
+  position: absolute;
+  width: 100%;
+  left: -100%;
+  font-family: 'Libre Baskerville', serif;
+  transition: all 0.7s;
+  transition-delay: 0.6s;
+  top: 13%;
+  color:yellow;
+  background: rgba(0,0,0,0.5);
+  font-size: 15px;
+  display: flex;
+  
+}
+.contenedor-imagen:hover h2{
+  left: 20%;
+}
+.contenedor-imagen p{
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  color: yellow;
+  bottom: -100px;
+  font-family: 'Libre Baskerville', serif;
+  transition-delay: 0.6s;
+  font-size: 10px;
+  background: rgba(0,0,0,0.5);
+  
+
+}
+.contenedor-imagen:hover p{
+  bottom: 10%;
+  left: 18%;
+}
+
+/* fin del texto de la seccion cd*/
+
+
+/*Estilos a la tienda*/
+
+.tienda-general{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  background: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 0.4s cubic-bezier(0,1.57,.67,1.18);
+  
+}
+
+
+.tienda-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: black;
+}
+
+.tienda-box{
+  flex: 1 1 300px;
+  background: white;
+  border: 1px solid black;
+  position: relative; z-index: 0;
+  overflow: hidden;
+  margin: 20px;
+}
+ /*la imagen*/
+.tienda-box .tienda-imagen1{
+  padding: 10px;
+  background: blanchedalmond;
+  text-align: center;
+}
+.tienda-box .tienda-imagen1 img {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.7));
+}
+
+
+.tienda-box .tienda-info .tienda-titulo{
+  padding: 10px;
+  color: red;
+  font-size: 25px;
+  font-family: 'Libre Baskerville', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tienda-box .tienda-info .tienda-sub-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-top: solid 1px black;
+}
+.tienda-box .tienda-info .tienda-sub-info .tienda-precio{
+  color: darkorange;
+  font-size: 20px;
+ 
+}
+
+.tienda-box .tienda-info .tienda-sub-info .tienda-precio span {
+  font-size: 15px;
+  color: grey;
+  text-decoration: line-through;
+  
+}
+.tienda-box .tienda-info .tienda-sub-info .tienda-stars{
+  color: orange;
+  font-size: 17px;
+}
+
+.tienda-box .tienda-estrellas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 223px;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  transform: scale(0);
+}
+.tienda-box:hover .tienda-estrellas{
+  transform: scale(1);
+}
+.tienda-box .tienda-estrellas a{
+  color: #666;
+  background: white;
+  margin: 10px;
+  padding: 13px 15px;
+  font-size: 15px;
+  transform: translateY(-150px);
+  transition-property: tranform;
+  transition-delay: calc(.1s *var(--i));
+}
+.tienda-box .tienda-estrellas a:hover{
+  color: orange;
+}
+.tienda-box:hover .tienda-estrellas a{
+  transform: translateY(0px);
+}
+
+ .tienda-titulo2{
+   display: flex;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   font-size: 6rem;
+   background: rgba(0,0,0,.5);
+   font-family: 'Bevan', cursive;
+   
+   
+ }
+ .tienda-titulo2 h1{
+   background-image: linear-gradient(to right, yellow, transparent);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-top: 42px;
+
+ }

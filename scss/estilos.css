@@ -1,0 +1,155 @@
+/* footter a ver como sale*/
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  text-transform: uppercase;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#footer {
+  width: 100%;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-container i:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.footer-container .logo-container, .footer-container .info, .footer-container .formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 3rem;
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25rem;
+          flex: 1 0 25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.footer-container .logo-container {
+  text-align: center;
+}
+
+.footer-container .logo-container .icons {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.footer-container .icons .facebook {
+  color: blueviolet;
+}
+
+.footer-container .icons .instagram {
+  color: #cd5c5c;
+}
+
+.footer-container .icons .twitter {
+  color: cornflowerblue;
+}
+
+.footer-container .icons .youtube {
+  color: red;
+}
+
+.footer-container .icons .spotify {
+  color: green;
+}
+
+.footer-container .logo h1 {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(black, yellow);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Bevan', cursive;
+  -webkit-text-stroke: 1.5px yellow;
+}
+
+.info i {
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+.info i::after {
+  content: attr(data-text);
+  font-size: 2rem;
+  margin: 0 2rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.formulario h1 {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.formulario p {
+  margin: .5rem 0;
+  font-size: 1.5rem;
+}
+
+.formulario input[type="email"] {
+  outline: none;
+  border: none;
+  padding: 0 1rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.formulario input[type="submit"] {
+  outline: none;
+  border: none;
+  width: 8rem;
+  height: 3rem;
+  background: yellow;
+  color: #fff;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
